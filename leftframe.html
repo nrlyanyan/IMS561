@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Website</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="profile-container">
+    <img src="me2.jpg" class="profile-pic">
+</div>
+
+<div class="line-dots">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+        <img src="dot.png" alt="line dot">
+    </marquee>
+</div>
+
+<div class="info-box">
+
+    <div class="info-row">
+        <div class="name-text">NURUL IZYAN BINTI SHAMSUL ZAMDI</div>
+    </div>
+    <br>
+    <div class="info-row">
+        <div class="subtitle-text">LIBRARY & INFORMATION SCIENCE STUDENT</div>
+    </div>
+    <br>
+    <div class="info-row">
+        <div class="id-text">STUDENT ID: 2024607704</div>
+    </div>
+
+</div>
+
+<div class="audio-toggle">
+    <div class="music-wrapper">
+        <button class="music-btn"><i class="fa-solid fa-pause"></i></button>
+
+        <!-- Slide-out music title -->
+        <div class="music-title">Alexis Ffrench - Wishing</div>
+    </div>
+
+    <audio id="myAudio" loop autoplay>
+        <source src="Wishing - Alexis Ffrench.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+
+
+<style>
+
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.audio-toggle {
+    text-align: left;
+    margin-top: 107px;
+}
+
+.music-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+
+.music-btn {
+    width: 40px;
+    height: 40px;
+    background: #700d42;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+
+.music-btn.playing {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+.music-title {
+    position: absolute;
+    top: 50%;
+    left: 50px; /* right beside the button */
+    transform: translateY(-50%) translateX(-10px);
+    background: #f4e7ef;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: 1px solid #700d42;
+    color: #700d42;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.music-wrapper:hover .music-title {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.music-btn:hover {
+    background: #8a1554;
+}
+
+.profile-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 5px;
+    width: 190px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.line-dots {
+    margin: 5px 0 15px 0;
+}
+
+.info-box {
+    text-align: center;
+    line-height: 1em;
+    font-size: 16px;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.name-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #700d42;
+}
+
+.subtitle-text, .id-text {
+    font-size: 18px;
+    color: #700d42;
+    font-weight: 600;
+    align-items: center;
+}
+
+
+</style>
+
+
+<script>
+const audio = document.getElementById("myAudio");
+const btn = document.querySelector(".music-btn");
+
+// Start rotating since autoplay begins
+btn.classList.add("playing");
+
+// Toggle play/pause
+btn.addEventListener("click", function() {
+    if (audio.paused) {
+        audio.play();
+        btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        btn.classList.add("playing");
+    } else {
+        audio.pause();
+        btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+        btn.classList.remove("playing");
+    }
+});
+</script>
+
+
+
+</body>
+</html>

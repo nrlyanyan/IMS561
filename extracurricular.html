@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Extracurricular</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    background-color: #f3d8f5;
+    font-family: "Gabarito", sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 600;
+    background: #ffffffaa;
+    padding: 10px 20px;
+    border-left: 6px solid #b30059;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* ensures square */
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    border-color: #777;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+
+footer {
+    background: #4d0026;
+    color: white;
+    margin-top: 60px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: "Urbanist", sans-serif;
+}
+
+.footer-social {
+    margin-bottom: 30px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 20px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+    background: white;
+    color: black;
+}
+
+.footer-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.footer-menu li a:hover {
+    color: gold;
+}
+
+.footer-bottom {
+    font-size: 15px;
+    color: white;
+    margin: 0;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-social a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 13px;
+    }
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<h1><b>EXTRACURRICULAR</b></h1>
+
+
+<p class="section-title">Bendahari Kelab Akademik INSTICS 2022/2023</p>
+<div class="gallery">
+    <div class="gallery-item"><img src="img1.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img9.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img20.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img11.jpg" alt=""></div>
+</div>
+
+
+<p class="section-title">Project Manager for Language Quest with Vomer program 2023/2024</p>
+<div class="gallery">
+    <div class="gallery-item"><img src="img2.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img3.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img4.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img5.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img22.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img7.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img8.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img23.jpg" alt=""></div>
+</div>
+
+
+<p class="section-title">AJK Activity – Program Hikayat Ilmu: Menghidupkan Jiwa Membaca 2025/2026</p>
+<div class="gallery">
+    <div class="gallery-item"><img src="img13.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img14.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img15.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img16.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img17.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img18.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img19.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img24.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img25.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img26.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img27.jpg" alt=""></div>
+    <div class="gallery-item"><img src="img28.jpg" alt=""></div>
+</div>
+
+
+<div id="lightbox">
+    <img id="lightbox-img" src="">
+</div>
+
+<script>
+// Zoom function
+const galleryImages = document.querySelectorAll(".gallery-item img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+    });
+});
+
+// Close when clicked anywhere
+lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+</script>
+
+
+
+<footer>
+    <div class="footer-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+    </div>
+
+    <ul class="footer-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="personal.html">Personal Details</a></li>
+        <li><a href="work.html">Work Experience</a></li>
+        <li><a href="edu.html">Education</a></li>
+        <li><a href="extracurricular.html">Extracurricular</a></li>
+        <li><a href="skills.html">Skills</a></li>
+    </ul>
+
+    <p class="footer-bottom">
+        Copyright ©2025; Designed by <b>Nurul Izyan</b>
+    </p>
+</footer>
+
+</body>
+</html>
